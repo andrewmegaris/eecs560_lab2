@@ -8,12 +8,14 @@
 
 class node{
 public:
-    node *nextNode; //will contain address of the next node
-    int value;  //contains the nodes value
-    
-    //de/constructors
     node();
     ~node();
+    void setValue(int);
+    void setNext(node* nextNode);
+    int getValue();
+private:
+    node* next;
+    int value;
 };
 
 

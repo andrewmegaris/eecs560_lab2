@@ -9,16 +9,17 @@
 
 //local include
 #include "linkedList.cpp"
-
+#include "node.h"
+class linkedList{
 public:
     linkedList();
     ~linkedList();
-    
+
     void print();
-    void insert(x);
+    void insert(int);
+    void runList(bool);
+    bool checkList(int);
 private:
-    node* list;
-    node* newNode();
-    node* checkList(int);
-    
+    node* headNode;
+};
 #endif
