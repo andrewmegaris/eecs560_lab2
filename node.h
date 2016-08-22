@@ -1,14 +1,20 @@
 #ifndef _NODE
 #define _NODE
 
-template <class ItemType>
-class Node{
+//global includes
+#include <cstddef> // this is used only for null inclusion
+//local includes
+#include "node.cpp"
 
+class node{
 public:
-
-private:
-
+    node *nextNode; //will contain address of the next node
+    int value;  //contains the nodes value
+    
+    //de/constructors
+    node();
+    ~node();
 };
 
-#include "node.cpp"
+
 #endif
