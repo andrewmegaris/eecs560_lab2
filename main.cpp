@@ -1,11 +1,23 @@
-//node element
-struct node {
-	int value;
-	node *next;
-};
+#include <iostream>
+#include <fstream>
+#include <string>
 
 //main
 int main(){
+    std::string input;
+    std::ifstream myfile;
+    myfile.open ("data.txt");
+    if(myfile.is_open()){
+        while (getline (myfile,input))
+        {std::cout << input << '\n';}
+        myfile.close();
+
+    }
+    else
+        std::cout << "Error opening file";
+
+    return 0;
+}/*
 	node *root;
 	node *nextNode;
 	
@@ -44,3 +56,4 @@ void insert(x){
 	nextNode -> value = x; //assign new input value
 	
 }
+*/

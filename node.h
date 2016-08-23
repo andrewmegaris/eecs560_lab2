@@ -13,6 +13,7 @@ public:
     void setValue(int);
     void setNext(node* nextNode);
     int getValue();
+    node* getNext();
 private:
     node* next;
     int value;

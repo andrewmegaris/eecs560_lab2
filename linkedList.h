@@ -17,8 +17,7 @@ public:
 
     void print();
     void insert(int);
-    void runList(bool);
-    bool checkList(int);
+
 private:
     node* headNode;
 };

@@ -1,17 +1,8 @@
-void linkedList::print(){
-    runList(true);
+
+linkedList::linkedList(){
+    headNode = NULL;
 }
 
-void linkedList::insert(int value){
-bool canInsert;
-canInsert = checkList(value);
-if (canInsert){
-    
-}
-}
+void linkedList::print(){}
 
-void linkedList::runList(bool toPrint){}
-
-bool linkedList::checkList(int value){
-
-}
+void linkedList::insert(int){}
