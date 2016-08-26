@@ -5,6 +5,7 @@
 int main(int argc, char** argv){
 
   LinkedList list;
+  bool initialLoad = true;
   int userInput = 99;
   int input;
   std::ifstream inputFile("data.txt");
@@ -20,7 +21,12 @@ int main(int argc, char** argv){
        list.printList();
       cout << endl;
     }
-
+    if(initialLoad){
+      cout << "data.txt elements : ";
+      list.printList();
+      cout << endl;
+      initialLoad = false;
+    }
     cout << "*-------------------------*" << endl;
     cout << "- MENU                     " << endl;
     cout << "---------------------------" << endl;
@@ -38,7 +44,8 @@ int main(int argc, char** argv){
        cout << "*-------------------------*" << endl;
        cout << "- Type Value To Input     -" << endl;
        cout << "- Input Value: ";
-       cin >> userInput;
+       cin >> input;
+       list.insertNode(input);
     }
   }
   return 0;

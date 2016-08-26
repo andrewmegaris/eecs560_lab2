@@ -14,6 +14,7 @@ class LinkedList {
 
   public:
     LinkedList();
+    ~LinkedList();
     void insertNode(int);
     void printList();
 };
