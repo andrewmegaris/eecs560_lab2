@@ -6,6 +6,7 @@ class LinkedList {
     typedef struct node{
       int value;
       node* next;
+      node* prev;
     }* nodePtr;
 
     nodePtr head;
@@ -16,7 +17,13 @@ class LinkedList {
     LinkedList();
     ~LinkedList();
     void insertNode(int);
+    void reverse();
+    void erase(int);
+    void find(int);
     void printList();
+
+  private:
+    void recurseToEnd();
 };
 
 #endif

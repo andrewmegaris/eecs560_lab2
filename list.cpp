@@ -60,3 +60,45 @@ void LinkedList::printList(){
   }
 }
 
+void LinkedList::reverse(){
+  LinkedList  revList;
+}
+
+void LinkedList::concatenate(){
+  if(currentNode//HERE WIP
+}
+
+void LinkedList::find(int findValue){}
+
+void LinkedList::recurseToEnd(){
+  //if the list is not empty
+  if(currentNode != NULL){
+    //move to end of list
+    if(currentNode -> next != NULL){
+      currentNode = currentNode -> next;
+      //recursively call until currentNode is pointing at end of list.
+      this.recursetoEnd();
+    }
+  }
+}
+
+void LinkedList::erase(int eraseValue){
+  currentNode = head;
+  //check for empty list
+  if(currentNode != NULL){
+    //continue checking the list
+    while(currentNode -> next != NULL){
+      if(currentNode -> value == eraseValue){
+        //check for deletion of head node case
+        if(head -> value == eraseValue){
+          head = currentNode -> next;
+          delete currentNode;
+          currentNode = head;
+        }
+        else
+          currentNode = currentNode -> next;
+      }
+    }
+  }
+}
+
