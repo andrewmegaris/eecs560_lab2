@@ -2,28 +2,24 @@
 #define LIST_H
 
 class LinkedList {
-  private:
+  public:
     typedef struct node{
       int value;
       node* next;
-      node* prev;
     }* nodePtr;
 
     nodePtr head;
     nodePtr currentNode;
     nodePtr temp;
 
-  public:
     LinkedList();
     ~LinkedList();
     void insertNode(int);
-    void reverse();
+    void reverse(nodePtr);
     void erase(int);
-    void find(int);
     void printList();
+    void concatenate(nodePtr);
 
-  private:
-    void recurseToEnd();
 };
 
 #endif
