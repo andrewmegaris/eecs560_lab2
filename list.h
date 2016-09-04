@@ -18,7 +18,7 @@ class LinkedList {
     void reverse(nodePtr);
     void erase(int);
     void printList();
-    void concatenate(nodePtr);
+    void concatenate(LinkedList &);
 
 };
 

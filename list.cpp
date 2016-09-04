@@ -70,28 +70,24 @@ void LinkedList::reverse(nodePtr p){
   p -> next = NULL;
 }
 
-void LinkedList::concatenate(nodePtr listTwoPtr){
-  cout << "start flagged " << listTwoPtr -> value <<endl;
+void LinkedList::concatenate(LinkedList &listTwo){
   currentNode = head;
   //move to end of list.
   while(currentNode -> next != NULL){
-    //cout << "while loop flagged" << endl;
     currentNode = currentNode -> next;
   }
-  //connect to L1, not end of L2
-  if(listTwoPtr -> next != NULL){
-    cout << "connect, not end" << endl;
-    currentNode -> next = listTwoPtr;
-    listTwoPtr = listTwoPtr -> next;
-    this -> concatenate(listTwoPtr);
+  if(listTwo.head -> next != NULL){
+    currentNode -> next = listTwo.head;
+    listTwo.head = listTwo.head -> next;
+    currentNode -> next -> next = NULL;
+    concatenate(listTwo);
   }
-  //connect to L1, end of L2
-  else if(listTwoPtr -> value != NULL){
-    cout << "connect, end" << endl;
-    currentNode -> next = listTwoPtr;
+  else if(listTwo.head != NULL){
+    currentNode -> next = listTwo.head;
+    listTwo.head = NULL;
     return;
-   }
-  return;
+  }
+  
 }
 
 void LinkedList::erase(int eraseValue){

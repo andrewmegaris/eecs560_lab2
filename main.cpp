@@ -64,9 +64,7 @@ int main(int argc, char** argv){
     }
     //Concatante Lists Function
     else if(userInput == 4){
-      listTwo.printList();
-      cout << endl;
-      list.concatenate(listTwo.head);
+      list.concatenate(listTwo);
     }
 
     cout << "*-------------------------*" << endl;
